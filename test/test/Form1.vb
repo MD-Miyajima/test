@@ -1,6 +1,7 @@
 ﻿
 Public Class Form1
 
+    '.csvを分割してItems()として出力
     Function csv_spriter(file As String)
 
         Dim Reader As New IO.StreamReader(file, System.Text.Encoding.GetEncoding("Shift-JIS"))
@@ -14,6 +15,7 @@ Public Class Form1
 
     End Function
 
+    'folderの中のファイルを時系列順にリストにして出力
     Function csv_list(path As String)
 
         Dim folders As New IO.DirectoryInfo(path)
@@ -30,6 +32,7 @@ Public Class Form1
 
     End Function
 
+    'あるパスのフォルダにある.csvをセルごとに分割して出力
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim main_path As String
